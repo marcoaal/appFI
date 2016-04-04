@@ -38,15 +38,12 @@ app.post('/registro', function(req, res){
 		registro(correoCampo,usernameCampo,nocuentaCampo,passwordCampo,carreraCampo);
 });
 
-//Sigin de usuarios
-/*
 app.post('/sigin',function(req,res){
 	var correoCampo = req.body.correo,
 		passwordCampo = req.body.password;
 		res.send(200);
 		sigin(correoCampo,passwordCampo);
 });
-*/
 
 var registro = function(correoR, usernameR, nocuentaR, passwordR, carreraR) {
 	var datos = {
@@ -69,8 +66,6 @@ var registro = function(correoR, usernameR, nocuentaR, passwordR, carreraR) {
 	});
 };
 
-//Sigin de usuarios
-/*
 var sigin = function(correoR,passwordR){
 	var datos = {
 		TableName: config.REGISTRO_APPFI,
@@ -88,7 +83,6 @@ var sigin = function(correoR,passwordR){
 		}
 	});
 };
-*/
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Servidor express escuchando en el puerto ' + app.get('port'));
